@@ -1,0 +1,12 @@
+apiVersion: "serving.kserve.io/v1beta1"
+kind: "InferenceService"
+metadata:
+  name: "t5"
+  namespace: kserve-test
+spec:
+  predictor:
+    model:
+      modelFormat:
+        name: pytorch
+      storageUri: "http://docker.io/joshbottum/t5-container:latest"
+
